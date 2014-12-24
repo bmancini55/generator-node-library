@@ -55,7 +55,6 @@ module.exports = generators.Base.extend({
       this.username     = props.username;
       this.fullname     = props.fullname;
       this.email        = props.email;
-console.log(this.keywords);
       done();
     }.bind(this);
 
@@ -67,13 +66,13 @@ console.log(this.keywords);
   writing: {
     gitignore: function() {
       this.fs.copy(
-        this.templatePath('.gitignore'),
+        this.templatePath('_gitignore'),
         this.destinationPath('.gitignore')
       );
     },
     jshint: function() {
       this.fs.copy(
-        this.templatePath('.jshintrc'),
+        this.templatePath('_jshintrc'),
         this.destinationPath('.jshintrc')
       );
     },
@@ -120,7 +119,7 @@ console.log(this.keywords);
     },
     testJshintrc: function() {
       this.fs.copy(
-        this.templatePath('test/.jshintrc'),
+        this.templatePath('test/_jshintrc'),
         this.destinationPath('test/.jshintrc')
       );
     },
