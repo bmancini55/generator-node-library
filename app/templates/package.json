@@ -1,0 +1,20 @@
+{
+  "name": "<%= name %>",
+  "version": "0.1.0",
+  "description": "<%= description %>",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/<%= username %>/<%= name %>"
+  },
+  "keywords": [ 
+    <%= keywords.map(function(keyword) { return '"' + keyword.trim() + '"'; }).join(',') %>
+  ],
+  "author": "<%= fullname %> <<%= email %>>",
+  "license": "MIT",
+  "dependencies": {
+  }
+}
