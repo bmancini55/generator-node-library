@@ -92,9 +92,12 @@ module.exports = generators.Base.extend({
       );
     },
     license: function() {
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('LICENSE'),
-        this.destinationPath('LICENSE')
+        this.destinationPath('LICENSE'),
+        {
+          fullname: this.fullname
+        }
       );
     },
     package: function() {
